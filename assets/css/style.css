@@ -1,0 +1,9 @@
+.col-md-6 {
+    background: lightblue;
+}
+
+#total-score,
+#target-score {
+    padding: 20px;
+    padding-bottom: 120px;
+}
