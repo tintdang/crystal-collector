@@ -9,6 +9,10 @@ header{
     border: 2px solid black;
 }
 
+p{
+    font-family: fantasy;
+}
+
 #instructions {
     padding: 2px;
     background: greenyellow;
