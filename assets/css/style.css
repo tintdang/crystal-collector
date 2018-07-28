@@ -2,6 +2,10 @@
     background: lightblue;
 }
 
+.col-md-3 {
+    border: 1px solid black;
+}
+
 #total-score,
 #target-score {
     padding: 20px;
