@@ -1,13 +1,48 @@
+body {
+background-image: url(../images/background.jpg);
+background-repeat: repeat;
+}
+
+header{
+    text-align: center;
+    background: silver;
+    border: 2px solid black;
+}
+
+#instructions {
+    padding: 2px;
+    background: greenyellow;
+    border: 1px solid black;
+}
+
 .col-md-6 {
     background: lightblue;
 }
 
 .col-md-3 {
+    border: 1px solid;
+}
+
+#scoreName {
     border: 1px solid black;
 }
 
 #total-score,
 #target-score {
     padding: 20px;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
+    font-size: 60px;
+}
+
+#scoretalley{
+    background: white;
+    border: 1px solid black;
+}
+
+#borderright{
+    border-right: 2px solid black;
+}
+
+h2{
+    padding-left: 90px;
 }
