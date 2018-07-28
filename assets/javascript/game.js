@@ -21,10 +21,17 @@ var green = (Math.floor(Math.random() * 12) + 1);
 // Set up target score from 19-120
 targetScore = (Math.floor(Math.random() * 102) + 19);
 
+function scoreUpdate() {
+    $("#total-score").text(currentScore); // update the total score
+    $("#target-score").text(targetScore); // updates the target score
+};
+//Then run the function to update the target score
+scoreUpdate();
+
 //This is a function that will reset the game when 
 function reset() {
     //clear current score back to 0
-    currentscore = 0;
+    currentScore = 0;
 
     //Set up new crystal numbers
     blue = (Math.floor(Math.random() * 12) + 1);
@@ -34,23 +41,40 @@ function reset() {
 
     // Set up new target score
     targetScore = (Math.floor(Math.random() * 102) + 19);
-}
+
+    //Then update the scores
+    scoreUpdate();
+};
+
+
 
 
 //They win if they match targetScore === currentScore
 //They lose if they go over winScore; then reset
 function outcome() {
-    if (currentScore === targetScore){
+    if (currentScore === targetScore){// If they win
         //Alert that they won, increment the win score and reset the numbers
         alert("You won"); 
         win++;
         reset();
 
         
-    } else if (currentScore > targetScore){
+    } else if (currentScore > targetScore){// if they lose
         //Alert they lose, increment the lose score and reset the numbers
         alert("You lost! Would you like to try again?");
-        lose++
+        lose++;
         reset();
     }
-}
+};
+
+//-----------------------------------------------------------------------------
+//set the click functions for the crystals
+//-----------------------------------------------------------------------------
+//When blue crystal is clicked
+$("#blue").click(function(){
+    currentScore += blue; //add the score
+    scoreUpdate(); //Run the score update
+    outcome(); // Check if they won or went over the score
+});
+
+//
