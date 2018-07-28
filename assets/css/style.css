@@ -32,6 +32,8 @@ header{
     padding: 20px;
     padding-bottom: 80px;
     font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #scoretalley{
@@ -44,5 +46,14 @@ header{
 }
 
 h2{
-    padding-left: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p#win,
+p#lose {
+    padding: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
