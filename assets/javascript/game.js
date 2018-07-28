@@ -24,6 +24,9 @@ targetScore = (Math.floor(Math.random() * 102) + 19);
 function scoreUpdate() {
     $("#total-score").text(currentScore); // update the total score
     $("#target-score").text(targetScore); // updates the target score
+
+    $("#win").text("Wins: " + win);
+    $("#lose").text("Lose: " + lose);
 };
 //Then run the function to update the target score
 scoreUpdate();
@@ -77,4 +80,23 @@ $("#blue").click(function(){
     outcome(); // Check if they won or went over the score
 });
 
-//
+//When clear crystal is clicked
+$("#clear").click(function(){
+    currentScore += clear; //add the score
+    scoreUpdate(); //Run the score update
+    outcome(); // Check if they won or went over the score
+});
+
+//When green crystal is clicked
+$("#green").click(function(){
+    currentScore += green; //add the score
+    scoreUpdate(); //Run the score update
+    outcome(); // Check if they won or went over the score
+});
+
+//When yellow crystal is clicked
+$("#yellow").click(function(){
+    currentScore += yellow; //add the score
+    scoreUpdate(); //Run the score update
+    outcome(); // Check if they won or went over the score
+});
