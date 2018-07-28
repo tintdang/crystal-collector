@@ -21,6 +21,7 @@ var green = (Math.floor(Math.random() * 12) + 1);
 // Set up target score from 19-120
 targetScore = (Math.floor(Math.random() * 102) + 19);
 
+//This is a function that will reset the game when 
 function reset() {
     //clear current score back to 0
     currentscore = 0;
@@ -36,5 +37,20 @@ function reset() {
 }
 
 
-//They win if they match targetScore === winScore
-//They lose if they go over winScore; 
+//They win if they match targetScore === currentScore
+//They lose if they go over winScore; then reset
+function outcome() {
+    if (currentScore === targetScore){
+        //Alert that they won, increment the win score and reset the numbers
+        alert("You won"); 
+        win++;
+        reset();
+
+        
+    } else if (currentScore > targetScore){
+        //Alert they lose, increment the lose score and reset the numbers
+        alert("You lost! Would you like to try again?");
+        lose++
+        reset();
+    }
+}
