@@ -57,7 +57,7 @@ function reset() {
 function outcome() {
     if (currentScore === targetScore){// If they win
         //Alert that they won, increment the win score and reset the numbers
-        alert("You won"); 
+        alert("You won! Play again?"); 
         win++;
         reset();
 
