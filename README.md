@@ -1,5 +1,5 @@
 # Crystal Collection Game
-  **Reach the target score by collecting crystals!**
+  Reach the target score by collecting crystals!
 
 
 ## Demo
